@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Stalker: Зона отчуждения</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>☢️ Зона отчуждения</h1>
+
+        <!-- Статы игрока -->
+        <div class="player-stats">
+            <p>Имя: <span id="player-name">Неизвестный</span></p>
+            <p>Локация: <strong id="location">Свалка</strong></p>
+            <p>HP: <span id="hp">100</span> | Радиация: <span id="rad">0</span></p>
+        </div>
+
+        <!-- Слоты экипировки -->
+        <div class="equipment-slots">
+            <h3>🎯 Экипировка</h3>
+            <div class="slot" onclick="unequip('weapon')">
+                Оружие: <span id="slot-weapon">—</span>
+            </div>
+            <div class="slot" onclick="unequip('pistol')">
+                Пистолет: <span id="slot-pistol">—</span>
+            </div>
+            <div class="slot" onclick="unequip('armor')">
+                Броня: <span id="slot-armor">—</span>
+            </div>
+            <div class="slot" onclick="unequip('helmet')">
+                Шлем: <span id="slot-helmet">—</span>
+            </div>
+            <div class="slot" onclick="unequip('artefact1')">
+                Артефакт 1: <span id="slot-artefact1">—</span>
+            </div>
+            <div class="slot" onclick="unequip('artefact2')">
+                Артефакт 2: <span id="slot-artefact2">—</span>
+            </div>
+            <div class="slot" onclick="unequip('artefact3')">
+                Артефакт 3: <span id="slot-artefact3">—</span>
+            </div>
+        </div>
+
+        <!-- Инвентарь -->
+        <div class="inventory-section">
+            <h3>🎒 Инвентарь</h3>
+            <button onclick="toggleSearch()">🔍 Искать тайник</button>
+            <ul id="inventory-list"></ul>
+        </div>
+    </div>
+</body>
+</html>
+
